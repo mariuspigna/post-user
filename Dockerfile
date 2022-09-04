@@ -11,8 +11,3 @@ FROM tomcat:jre8
 COPY --from=build /app/target/post-user.jar post-user.jar
 EXPOSE 8080
 ENTRYPOINT ["java","-jar","post-user.jar"]
-
-#FROM maven:3.8.5-openjdk-18
-#ADD target/post-user.jar post-user.jar
-#EXPOSE 8080
-#ENTRYPOINT ["java","-jar","post-user.jar"]
